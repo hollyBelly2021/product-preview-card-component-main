@@ -44,18 +44,19 @@
         display: grid;
         gap: 30px;
         grid-template-columns: repeat(2, 1fr);
+
+        border-radius: 7px;
       }
 
       .img-container {
         background-image: url("./images/image-product-desktop.jpg");
         background-size: cover;
+        border-radius: 7px 0px 0px 7px;
       }
       .info-styles {
         display: flex;
         flex-direction: column;
-        /* text-align: center; */
-        margin-top: 30px;
-        gap: 30px;
+        justify-content: space-evenly;
 
         font-family: "Fraunces", serif;
       }
@@ -71,6 +72,7 @@
       }
       .title-styles {
         font-size: 32px;
+        padding-right: 50px;
         /* font-family: "Fraunces", serif; */
       }
 
@@ -82,7 +84,7 @@
 
       .price-section {
         display: flex;
-        gap: 10px;
+        gap: 20px;
       }
 
       .discount {
@@ -90,27 +92,92 @@
         font-weight: 700;
         color: hsl(158, 36%, 37%);
       }
+
+      .original-price {
+        align-self: center;
+        text-decoration: line-through;
+      }
+      .button-styles {
+        display: flex;
+        gap: 10px;
+
+        border: none;
+        background-color: hsl(158, 36%, 37%);
+        font-family: "Montserrat", sans-serif;
+        font-weight: 500;
+        color: white;
+
+        justify-content: center;
+        align-items: center;
+
+        width: 236px;
+        height: 48px;
+
+        border-radius: 7px;
+      }
+
+      .button-styles:hover {
+        background-color: hsl(212, 21%, 14%);
+        cursor: pointer;
+      }
+
+      @media (max-width: 375px) {
+        .small-container {
+          width: 343px;
+          height: 611px;
+
+          display: grid;
+          grid-template-rows: 1.5fr 2fr;
+          grid-template-columns: 1fr;
+        }
+        .img-container {
+          background-image: url("./images/image-product-mobile.jpg");
+          background-size: cover;
+          border-radius: 7px 7px 0px 0px;
+          /* display: none; */
+        }
+
+        .info-styles {
+          grid-row-start: 2;
+          display: flex;
+
+          padding: 18px;
+          padding-top: 0px;
+        }
+
+        .title-styles {
+          padding-right: 0px;
+        }
+        .desc {
+          width: auto;
+        }
+
+        .button-styles {
+          width: auto;
+        }
+      }
     </style>
   </head>
 
   <body>
     <main class="main-container">
       <div class="small-container">
-        <section class="img-container"></section>
+        <section class="img-container img-container-2"></section>
         <section class="info-styles">
           <p class="p-styles additional">PERFUME</p>
-          <h1 class="title-styles">
-            Gabrielle<br />
-            Essence Eau <br />De Parfum
-          </h1>
+          <h1 class="title-styles">Gabrielle Essence Eau De Parfum</h1>
           <p class="p-styles desc">
             A floral, solar and voluptuous interpretation composed by Olivier
             Polge, Perfumer-Creator for the House of CHANEL.
           </p>
           <section class="price-section">
             <p class="discount">$149.99</p>
-            <p class="original-price">$169.99</p>
+            <p class="original-price p-styles">$169.99</p>
           </section>
+          <button class="button-styles">
+            <img src="./images/icon-cart.svg" alt="" />
+            Add to Cart
+          </button>
         </section>
       </div>
     </main>
