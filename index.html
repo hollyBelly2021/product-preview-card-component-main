@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+
+    <title>Frontend Mentor | Product preview card component</title>
+
+    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
+      @import url("https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
+      /* .attribution {
+        font-size: 11px;
+        text-align: center;
+      }
+      .attribution a {
+        color: hsl(228, 45%, 44%);
+      } */
+      * {
+        margin: 0;
+      }
+      .main-container {
+        height: 100vh;
+        background-color: hsl(30, 38%, 92%);
+        display: flex;
+
+        justify-content: center;
+        align-items: center;
+      }
+      .small-container {
+        width: 600px;
+        height: 450px;
+        background-color: hsl(0, 0%, 100%);
+
+        display: grid;
+        gap: 30px;
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .img-container {
+        background-image: url("./images/image-product-desktop.jpg");
+        background-size: cover;
+      }
+      .info-styles {
+        display: flex;
+        flex-direction: column;
+        /* text-align: center; */
+        margin-top: 30px;
+        gap: 30px;
+
+        font-family: "Fraunces", serif;
+      }
+
+      .p-styles {
+        font-family: "Montserrat", sans-serif;
+        font-size: 12px;
+        color: hsl(228, 12%, 48%);
+      }
+
+      .info-styles .additional {
+        letter-spacing: 4px;
+      }
+      .title-styles {
+        font-size: 32px;
+        /* font-family: "Fraunces", serif; */
+      }
+
+      .desc {
+        width: 250px;
+        font-size: 14px;
+        letter-spacing: 0.3px;
+      }
+
+      .price-section {
+        display: flex;
+        gap: 10px;
+      }
+
+      .discount {
+        font-size: 32px;
+        font-weight: 700;
+        color: hsl(158, 36%, 37%);
+      }
+    </style>
+  </head>
+
+  <body>
+    <main class="main-container">
+      <div class="small-container">
+        <section class="img-container"></section>
+        <section class="info-styles">
+          <p class="p-styles additional">PERFUME</p>
+          <h1 class="title-styles">
+            Gabrielle<br />
+            Essence Eau <br />De Parfum
+          </h1>
+          <p class="p-styles desc">
+            A floral, solar and voluptuous interpretation composed by Olivier
+            Polge, Perfumer-Creator for the House of CHANEL.
+          </p>
+          <section class="price-section">
+            <p class="discount">$149.99</p>
+            <p class="original-price">$169.99</p>
+          </section>
+        </section>
+      </div>
+    </main>
+  </body>
+</html>
