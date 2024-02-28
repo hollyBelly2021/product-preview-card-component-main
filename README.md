@@ -19,6 +19,8 @@ Users should be able to:
 
 ### Links
 
+- Preview - [Product Preview Card Component](https://hollybelly2021.github.io/product-preview-card-component-main/)
+
 ### Built with
 
 - Semantic HTML5 markup
